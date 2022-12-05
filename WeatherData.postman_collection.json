@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "79bc962f-9dd7-4609-91d8-48137a9ba357",
+		"name": "WeatherData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET with queries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/weather?sensor=sensor_1&sensor=sensor_2&metric=temperature&metric=humidity&metric=windSpeed&statistic=sum&dateStart=2022-12-01&dateEnd=2022-11-20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "sensor",
+							"value": "sensor_1"
+						},
+						{
+							"key": "sensor",
+							"value": "sensor_2"
+						},
+						{
+							"key": "metric",
+							"value": "temperature"
+						},
+						{
+							"key": "metric",
+							"value": "humidity"
+						},
+						{
+							"key": "metric",
+							"value": "windSpeed"
+						},
+						{
+							"key": "statistic",
+							"value": "sum"
+						},
+						{
+							"key": "dateStart",
+							"value": "2022-12-01"
+						},
+						{
+							"key": "dateEnd",
+							"value": "2022-11-20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"temperature\": 13.4,\n    \"humidity\": 54.8,\n    \"windSpeed\": 5.4,\n    \"sensor\": \"sensor_1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/weather",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"weather"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
